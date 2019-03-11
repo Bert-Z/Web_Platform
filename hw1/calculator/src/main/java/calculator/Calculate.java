@@ -1,6 +1,7 @@
 package calculator;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Calculate {
     public static final char NUMBER = '8';
@@ -9,7 +10,7 @@ public class Calculate {
     public static final char PROMPT = '>';
     public static final char RESULT = '=';
 
-    private TokenStream ts = new TokenStream();
+    private TokenStream ts;
 
     private int factorial(int n) {
         if (n == 0)
@@ -134,8 +135,14 @@ public class Calculate {
         }
     }
 
-    public void calculate() throws IOException {
+    public String setInput(){
         System.out.print(PROMPT);
+        Scanner scanner= new Scanner(System.in);
+        return scanner.next();
+    }
+
+    public void calculate(String input) throws IOException {
+        ts = new TokenStream(input);
         Token t = ts.get();
 
         while (t.kind == PRINT)
@@ -150,6 +157,24 @@ public class Calculate {
         System.out.println(RESULT + String.valueOf(ans));
 
         ts.ansvalue = ans;
+    }
+
+    // write for test
+    public String cal(String input) throws IOException {
+        ts = new TokenStream(input);
+        Token t = ts.get();
+
+        while (t.kind == PRINT)
+            t = ts.get();
+
+        if (t.kind == QUIT) {
+            System.exit(0);
+        }
+        ts.putback(t);
+        double ans = expression();
+
+        return (RESULT + String.valueOf(ans));
+
     }
 
 

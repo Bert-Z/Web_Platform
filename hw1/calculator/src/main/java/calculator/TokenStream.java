@@ -1,18 +1,18 @@
 package calculator;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class TokenStream {
     public boolean full;
     public Token buffer;
-    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private BufferedReader br;
     public static double ansvalue = 0;
 
     // Token buffer set null as default
-    TokenStream() {
+    TokenStream(String input) {
         this.full = false;
+        InputStream is=new ByteArrayInputStream(input.getBytes());
+        br= new BufferedReader(new InputStreamReader(is));
     }
 
     public void putback(Token t) {
@@ -60,7 +60,7 @@ public class TokenStream {
                     br.mark(1000);
                     ch = (char) (br.read());
                 }
-                br.reset();
+                br.reset(); // return to the mark position
                 double val;
                 val = Double.parseDouble(sval);
                 return new Token(Calculate.NUMBER, val);

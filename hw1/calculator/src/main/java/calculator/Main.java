@@ -7,7 +7,8 @@ public class Main {
         while (true) {
             try {
                 Calculate cal = new Calculate();
-                cal.calculate();
+                String input=cal.setInput();
+                cal.calculate(input);
             } catch (Exception e) {
                 System.out.println(e);
                 System.exit(-1);

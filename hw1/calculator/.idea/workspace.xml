@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f801beb6-41f5-4f60-854b-f46f7ec27719" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/calculator/Calculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/calculator/Calculate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/TokenStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/TokenStream.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,48 +24,59 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/calculator/TokenStream.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="466">
-                  <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#275#276#0" expanded="true" />
-                    <element signature="e#308#309#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Calculate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="137" column="33" lean-forward="true" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/calculator/TokenStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Token.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Calculate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,6 +103,7 @@
         <option value="$PROJECT_DIR$/src/main/java/calculator/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/calculator/TokenStream.java" />
         <option value="$PROJECT_DIR$/src/main/java/calculator/Calculate.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CalTest.java" />
       </list>
     </option>
   </component>
@@ -142,6 +158,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -153,7 +176,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552307706033" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552312591977" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -177,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.CalTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="calculator.Main" />
       <module name="hw1.bert.main" />
@@ -204,9 +227,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1.bert.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1.bert.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalTest.testCase1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw1.bert.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalTest" />
+      <option name="METHOD_NAME" value="testCase1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalTest" />
+        <item itemvalue="JUnit.CalTest.add" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CalTest.testCase1" />
         <item itemvalue="Application.TokenStream" />
       </list>
     </recent_temporary>
@@ -222,12 +277,44 @@
       <option name="presentableId" value="Default" />
       <updated>1552233384487</updated>
       <workItem from="1552233389415" duration="10056000" />
-      <workItem from="1552285802880" duration="12057000" />
+      <workItem from="1552285802880" duration="16943000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 03m 32s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 03m 51s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 14m 55s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_testCase1 - 2019.03.11 at 21h 25m 07s.xml">
+      <configuration name="CalTest.testCase1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_testCase1 - 2019.03.11 at 21h 28m 31s.xml">
+      <configuration name="CalTest.testCase1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 53m 36s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 54m 02s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest_add - 2019.03.11 at 21h 54m 14s.xml">
+      <configuration name="CalTest.add" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest - 2019.03.11 at 21h 55m 33s.xml">
+      <configuration name="CalTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalTest - 2019.03.11 at 21h 56m 27s.xml">
+      <configuration name="CalTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22113000" />
+    <option name="totallyTimeSpent" value="26999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-7" width="2062" height="1126" extended-state="6" />
@@ -251,7 +338,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3279678" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3279678" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -278,6 +365,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -285,29 +379,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/TokenStream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/calculator/TokenStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="-19">
+          <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/calculator/Calculate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="137" column="33" lean-forward="true" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        <state relative-caret-position="51">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
