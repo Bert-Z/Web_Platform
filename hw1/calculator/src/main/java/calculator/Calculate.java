@@ -1,5 +1,7 @@
 package calculator;
 
+import java.io.IOException;
+
 public class Calculate {
     public static final char NUMBER = '8';
     public static final char PRINT = ';';
@@ -7,9 +9,9 @@ public class Calculate {
     public static final char PROMPT = '>';
     public static final char RESULT = '=';
 
-    private TokenStream ts;
+    private TokenStream ts = new TokenStream();
 
-    public double ansvalue = 0;
+//    public double ansvalue = 0;
 
     private int factorial(int n) {
         if (n == 0)
@@ -17,7 +19,7 @@ public class Calculate {
         return n * factorial(n - 1);
     }
 
-    private double basic() {
+    private double basic() throws IOException {
         Token t = ts.get();
         switch (t.kind) {
             case ('('): {
@@ -36,7 +38,7 @@ public class Calculate {
         }
     }
 
-    private double primary() {
+    private double primary() throws IOException {
         double left = basic();
         Token t = ts.get();
         if (t.kind == '!') {
@@ -54,7 +56,7 @@ public class Calculate {
     }
 
 
-    private double mid() {
+    private double mid() throws IOException {
         Token t = ts.get();
         switch (t.kind) {
             case '-':
@@ -68,7 +70,7 @@ public class Calculate {
     }
 
 
-    private double term() {
+    private double term() throws IOException {
         double left = mid();
         Token t = ts.get();
 
@@ -110,7 +112,7 @@ public class Calculate {
     }
 
 
-    private double expression() {
+    private double expression() throws IOException {
         double left = term();
         Token t = ts.get();
 
@@ -134,7 +136,7 @@ public class Calculate {
         }
     }
 
-    public void calculate() {
+    public void calculate() throws IOException {
         System.out.print(PROMPT);
         Token t = ts.get();
 
@@ -148,7 +150,7 @@ public class Calculate {
         double ans = expression();
         System.out.print(RESULT + ans + "/n");
 
-        ansvalue = ans;
+//        ansvalue = ans;
     }
 
 

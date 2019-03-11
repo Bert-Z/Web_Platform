@@ -1,10 +1,14 @@
 package calculator;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class TokenStream {
     public boolean full;
     public Token buffer;
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     // Token buffer set null as default
     TokenStream() {
@@ -16,18 +20,15 @@ public class TokenStream {
         full = true;
     }
 
-    public Token get() {
+    public Token get() throws IOException {
         if (this.full) {
             this.full = false;
             return buffer;
         }
 
-        Scanner scan = new Scanner(System.in);
-        String str = scan.next();
-        char ch = str.charAt(0);
+        char ch = (char) (br.read());
 
-
-        switch (ch){
+        switch (ch) {
             case Calculate.PRINT:
             case Calculate.QUIT:
             case '(':
@@ -49,36 +50,25 @@ public class TokenStream {
             case '6':
             case '7':
             case '8':
-            case '9':
-            {
+            case '9': {
+                String sval = ch + "";
+                ch = (char) (br.read());
+                while (ch == '0' || ch == '1' || ch == '2' || ch == '3' || ch == '4' || ch == '5' || ch == '6' || ch == '7' || ch == '8' || ch == '9' || ch == '.') {
+
+                    sval += ch;
+                    br.mark(1000);
+                    ch = (char) (br.read());
+                }
+                br.reset();
                 double val;
-                val=Double.parseDouble(str);
+                val = Double.parseDouble(sval);
                 return new Token(Calculate.NUMBER, val);
             }
-            default:{
+            default: {
                 throw new RuntimeException("Bad token");
             }
         }
 
     }
-
-//    public static void main(String[] args) {
-//        try {
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println(scan.next());
-//        String a = scan.next();
-//        if (a == "qa") {
-//            System.out.println(a);
-//            System.exit(1);
-//        }
-//
-//        System.out.println('a');
-//        System.exit(2);
-//                throw new RuntimeException("')'excepted");
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//        System.out.println(Calculate.NUMBER);
-//    }
 
 }
