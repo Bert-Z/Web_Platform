@@ -3,12 +3,12 @@ package calculator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class TokenStream {
     public boolean full;
     public Token buffer;
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static double ansvalue = 0;
 
     // Token buffer set null as default
     TokenStream() {
@@ -52,8 +52,9 @@ public class TokenStream {
             case '8':
             case '9': {
                 String sval = ch + "";
+                br.mark(1000);
                 ch = (char) (br.read());
-                while (ch == '0' || ch == '1' || ch == '2' || ch == '3' || ch == '4' || ch == '5' || ch == '6' || ch == '7' || ch == '8' || ch == '9' || ch == '.') {
+                while ((ch >= '0' && ch <= '9') || ch == '.') {
 
                     sval += ch;
                     br.mark(1000);
@@ -63,6 +64,13 @@ public class TokenStream {
                 double val;
                 val = Double.parseDouble(sval);
                 return new Token(Calculate.NUMBER, val);
+            }
+            case 'A': {
+                char n = (char) br.read();
+                char s = (char) br.read();
+                if (n == 'N' && s == 'S') {
+                    return new Token(Calculate.NUMBER, ansvalue);
+                }
             }
             default: {
                 throw new RuntimeException("Bad token");

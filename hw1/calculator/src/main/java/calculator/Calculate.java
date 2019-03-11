@@ -11,8 +11,6 @@ public class Calculate {
 
     private TokenStream ts = new TokenStream();
 
-//    public double ansvalue = 0;
-
     private int factorial(int n) {
         if (n == 0)
             return 1;
@@ -148,9 +146,10 @@ public class Calculate {
         }
         ts.putback(t);
         double ans = expression();
-        System.out.print(RESULT + ans + "/n");
 
-//        ansvalue = ans;
+        System.out.println(RESULT + String.valueOf(ans));
+
+        ts.ansvalue = ans;
     }
 
 
