@@ -1,9 +1,6 @@
 package calculator;
 
-import java.io.*;
 import java.util.Scanner;
-import java.io.PushbackInputStream;
-import java.io.ByteArrayInputStream;
 
 public class TokenStream {
     public boolean full;
@@ -19,18 +16,50 @@ public class TokenStream {
         full = true;
     }
 
-    //unfinished
     public Token get() {
         if (this.full) {
             this.full = false;
             return buffer;
         }
 
-        char ch = 'a';
         Scanner scan = new Scanner(System.in);
+        String str = scan.next();
+        char ch = str.charAt(0);
 
-        Token a = new Token(ch);
-        return a;
+
+        switch (ch){
+            case Calculate.PRINT:
+            case Calculate.QUIT:
+            case '(':
+            case ')':
+            case '+':
+            case '-':
+            case '*':
+            case '%':
+            case '/':
+            case '!':
+                return new Token(ch);
+            case '.':
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            {
+                double val;
+                val=Double.parseDouble(str);
+                return new Token(Calculate.NUMBER, val);
+            }
+            default:{
+                throw new RuntimeException("Bad token");
+            }
+        }
+
     }
 
 //    public static void main(String[] args) {
@@ -49,6 +78,7 @@ public class TokenStream {
 //        } catch (Exception e) {
 //            System.out.println(e);
 //        }
+//        System.out.println(Calculate.NUMBER);
 //    }
 
 }
