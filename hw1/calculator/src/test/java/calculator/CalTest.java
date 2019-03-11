@@ -1,3 +1,5 @@
+package calculator;
+
 import calculator.Calculate;
 import static org.junit.Assert.*;
 
@@ -7,7 +9,7 @@ import org.junit.*;
 
 
 public class CalTest {
-    Calculate cal=new Calculate();
+    private Calculate cal=new Calculate();
 
     @Test
     public void add() {
@@ -50,7 +52,7 @@ public class CalTest {
 
     @Test
     public void minus() {
-        String input="5-4;\r\n";
+        String input="5-8;\r\n";
         String res="";
         try{
             res=cal.cal(input);
@@ -58,7 +60,20 @@ public class CalTest {
             System.out.println(e);
         }
 
-        assertEquals("=1.0",res);
+        assertEquals("=-3.0",res);
+    }
+
+    @Test
+    public void mod() {
+        String input="5%8;\r\n";
+        String res="";
+        try{
+            res=cal.cal(input);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        assertEquals("=5.0",res);
     }
 
     @Test
@@ -73,4 +88,6 @@ public class CalTest {
 
         assertEquals("=6.0",res);
     }
+
+
 }
