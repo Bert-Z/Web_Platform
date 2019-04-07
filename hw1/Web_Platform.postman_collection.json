@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "1ab2c1e9-84d4-40c6-a39c-0c748cb9c19e",
+		"name": "Web_Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "calculatorGet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculator?input=3*8;",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "3*8;"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
