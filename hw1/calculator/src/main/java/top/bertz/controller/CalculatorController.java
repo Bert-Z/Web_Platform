@@ -1,32 +1,56 @@
 package top.bertz.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import top.bertz.calculator.Result;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import top.bertz.calculator.Calculate;
 
-import java.util.concurrent.atomic.AtomicLong;
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class CalculatorController {
 
-    private final AtomicLong counter = new AtomicLong();
+    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+    public ModelAndView home() {
+        ModelAndView mv = new ModelAndView("home");
 
-    @RequestMapping("/calculator")
-    public Result result(@RequestParam(value = "input", defaultValue = "ANS;") String input) {
+        return mv;
+    }
+
+    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+    public ModelAndView login() {
+        ModelAndView mv = new ModelAndView("login");
+
+        return mv;
+    }
+
+    @RequestMapping(value = {"/calculator"}, method = RequestMethod.GET)
+    public ModelAndView setInput() {
+        ModelAndView mv = new ModelAndView("calculator");
+
+        return mv;
+    }
+
+    @RequestMapping(value = {"/result"}, method = RequestMethod.POST)
+    public ModelAndView getResult(HttpServletRequest res) {
+
+        String input = res.getParameter("input");
+        ModelAndView mv = new ModelAndView("calculator");
+        mv.addObject("input", input);
+
         try {
             Calculate cals = new Calculate();
 
-            //因为URI中不能带加号（加号会转成空格），而且这次没有写前端，传值只能通过GET方法来进行，所以在这里把URI中的空格转成了加号，使计算器能正确运算
-            input = input.replace(' ', '+');
-
-
             String ret = cals.cal(input);
-            return new Result(counter.incrementAndGet(), ret);
+
+            mv.addObject("result", ret);
+
+            return mv;
         } catch (Exception e) {
-            System.out.println(e);
-            return new Result(counter.incrementAndGet(), input);
+            mv.addObject("result", "error");
+
+            return mv;
         }
+
     }
+
 }
