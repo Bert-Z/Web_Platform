@@ -3,8 +3,8 @@ package top.bertz.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import top.bertz.calculator.Result;
 import top.bertz.calculator.Calculate;
+import top.bertz.calculator.Result;
 
 import java.util.concurrent.atomic.AtomicLong;
 
