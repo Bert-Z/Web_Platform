@@ -7,9 +7,9 @@
 ## Run application in local container
 ```bask
 docker pull bertzhang/calculator
-docker run -d -p 8080:8080 bertzhang/calculator
+docker run -d -p 9000:9000 bertzhang/calculator
 ```
-因为我在springboot里面写了代理的端口，所以实际端口应该是9000。
+(之所以是9000而不是8080是因为我在spring项目里写了代理的端口)
 然后check一下container
 
 ```bash
